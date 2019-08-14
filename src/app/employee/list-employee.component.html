@@ -1,0 +1,111 @@
+<div  class="panel panel-primary" *ngFor='let emp of employees' >
+
+        <div class="panel-heading">
+            <div class="panel-title">
+                {{emp.name}}
+            </div>
+        </div>
+            <div class="panel-body">
+                <div class="col-xs-10">
+    <div class="row vertical-align">
+        <div class="col-xs-4">
+            <img [src]="emp.photoPath" class="imgclass" >
+        </div>
+        <div class="col-xs-8">
+                <div class="row">
+                        <div class="col-xs-6">
+                        Gender
+                       </div>
+       
+                        <div class="col-xs-6">
+                           :{{emp.gender}}
+             </div></div>
+       
+    
+    <div class="row">
+           <div class="col-xs-6">
+               Phone
+           </div>
+           
+           <div class="col-xs-6">
+                   :{{emp.phoneNumber}}
+           </div>
+           
+    </div>
+       <div class="row">
+               <div class="col-xs-6">
+                   Email
+               </div>
+               
+               <div class="col-xs-6">
+                       :{{emp.email}}
+               </div>
+               
+           </div>
+           <div class="row">
+                   <div class="col-xs-6">
+                       Date of Birth
+                   </div>
+                   
+                   <div class="col-xs-6">
+                           :{{emp.dateOfBirth}}
+                   </div>
+                   
+               </div>
+               
+           <div class="row">
+                   <div class="col-xs-6">
+                           Department
+                   </div>
+                   
+                   <div class="col-xs-6" [(ngSwitch)]="emp.department">
+                           <span *ngSwitchCase="1">HelpDesk</span>
+                           <span *ngSwitchCase="2">IT</span>
+                           <span *ngSwitchCase="3">HR</span>
+                           <span *ngSwitchCase="4">Payroll</span>
+                           <span *ngSwitchCase="5">Admin</span>
+                   </div>
+                   
+               </div>
+                                   
+           <div class="row">
+                   <div class="col-xs-6">
+                           Contact Prefreance
+                   </div>
+                   
+                   <div class="col-xs-6">
+                           :{{emp.ContactPrefreance}}
+                   </div>
+
+               </div>
+               <div class="row">
+                       <div class="col-xs-6">
+                               isActive
+                       </div>
+                       
+                       <div class="col-xs-6">
+                               :{{emp.isActive}}
+                       </div>
+                       
+                   </div>
+                   <div class="row">
+                           <div class="col-xs-6">
+                                   isActive
+                           </div>
+                           
+                           <div class="col-xs-6">
+                                   :{{emp.isActive}}
+                           </div>
+                           
+                       </div>
+                   
+        
+    
+    
+                        
+        </div>
+    </div>
+    
+                </div>
+    
+            </div>
